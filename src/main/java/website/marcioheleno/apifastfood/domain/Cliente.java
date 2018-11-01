@@ -1,20 +1,20 @@
 package website.marcioheleno.apifastfood.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 /**
  * The type Cliente.
  */
 @Entity
+@Table(name = "cliente")
 public class Cliente {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    
     private String nome;
 
     private String sobrenome;
@@ -27,10 +27,9 @@ public class Cliente {
     private Character sexo;
 
     // relacionamento n => 1
-    // n compras => 1 cliente
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name = "caixa")
-    private Caixa caixa;
+    //
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="cliente")
+    private List<Compra> compras;
 
     /**
      * Instantiates a new Cliente.
@@ -53,6 +52,44 @@ public class Cliente {
         this.idade = idade;
         this.endereco = endereco;
         this.sexo = sexo;
+    }
+
+
+    /**
+     * Instantiates a new Cliente.
+     *
+     * @param nome      the nome
+     * @param sobrenome the sobrenome
+     * @param idade     the idade
+     * @param endereco  the endereco
+     * @param sexo      the sexo
+     * @param compras   the compras
+     */
+    public Cliente(String nome, String sobrenome, Integer idade, String endereco, Character sexo, List<Compra> compras) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.idade = idade;
+        this.endereco = endereco;
+        this.sexo = sexo;
+        this.compras = compras;
+    }
+
+    /**
+     * Gets cars.
+     *
+     * @return the cars
+     */
+    public List<Compra> getCars() {
+        return compras;
+    }
+
+    /**
+     * Sets cars.
+     *
+     * @param compras the cars
+     */
+    public void setCars(List<Compra> compras) {
+        this.compras = compras;
     }
 
     /**
