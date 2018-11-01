@@ -27,9 +27,6 @@ public class Compra {
     @ManyToMany (mappedBy="compra")
     private Set<Produto> produto;
 
-
-
-
     /**
      * Instantiates a new Compra.
      *
@@ -104,27 +101,6 @@ public class Compra {
     public void setProduto(Set<Produto> produto) {
         this.produto = produto;
     }
-
-//    public Compra(int quantidade, BigDecimal valorTotal, Produto produto) {
-//        this.quantidade = quantidade;
-//        this.valorTotal = valorTotal;
-//        this.produto = produto;
-//    }
-
-//    public Compra(int quantidade, BigDecimal valorTotal, Cliente cliente, Produto produto) {
-//        this.quantidade = quantidade;
-//        this.valorTotal = valorTotal;
-//        this.cliente = cliente;
-//        this.produto = produto;
-//    }
-
-//    public Produto getProduto() {
-//        return produto;
-//    }
-
-//    public void setProduto(Produto produto) {
-//        this.produto = produto;
-//    }
 
     /**
      * Gets cliente.

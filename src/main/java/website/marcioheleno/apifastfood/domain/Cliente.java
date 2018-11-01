@@ -74,21 +74,11 @@ public class Cliente {
         this.compras = compras;
     }
 
-    /**
-     * Gets cars.
-     *
-     * @return the cars
-     */
-    public List<Compra> getCars() {
+    public List<Compra> getCompras() {
         return compras;
     }
 
-    /**
-     * Sets cars.
-     *
-     * @param compras the cars
-     */
-    public void setCars(List<Compra> compras) {
+    public void setCompras(List<Compra> compras) {
         this.compras = compras;
     }
 

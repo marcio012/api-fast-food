@@ -43,6 +43,14 @@ public class Produto {
         this.valorProduto = valorProduto;
     }
 
+    /**
+     * Instantiates a new Produto.
+     *
+     * @param nomeProduto      the nome produto
+     * @param descricaoProduto the descricao produto
+     * @param valorProduto     the valor produto
+     * @param compra           the compra
+     */
     public Produto(String nomeProduto, String descricaoProduto, int valorProduto, Compra compra) {
         this.nomeProduto = nomeProduto;
         this.descricaoProduto = descricaoProduto;
@@ -50,10 +58,20 @@ public class Produto {
         this.compra = compra;
     }
 
+    /**
+     * Gets compra.
+     *
+     * @return the compra
+     */
     public Compra getCompra() {
         return compra;
     }
 
+    /**
+     * Sets compra.
+     *
+     * @param compra the compra
+     */
     public void setCompra(Compra compra) {
         this.compra = compra;
     }
