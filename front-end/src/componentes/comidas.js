@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Button, Thumbnail, Col } from 'react-bootstrap/lib'
+
 class Comidas extends Component {
     render() {
         return(

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Navegador from './componentes/navegador';
-import Comidas from './componentes/comidas';
 import Axios from 'axios';
+import Loguinho from './componentes/loguinho';
+// import Home from './componentes/home';
+// import Siguinape from './componentes/siguinape';
 
 class App extends Component {
 
@@ -18,8 +19,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navegador />
-        <Comidas />
+        <Loguinho />
       </div>
     );
   }

@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Loguinho from './componentes/loguinho';
-import Siguinape from './componentes/siguinape';
 import * as serviceWorker from './serviceWorker';
-import { createMemoryStory, Router, Route } from 'react-router';
+// import { createMemoryStory, Router, Route } from 'react-router';
 
 
 ReactDOM.render(<App/>/* (
